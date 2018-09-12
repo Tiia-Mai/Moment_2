@@ -12,8 +12,8 @@ gulp.task("copyhtml",function(){
 
 /* Move Pictures */
 gulp.task("copyimages",function(){
-    return gulp.src("src/images")
-    .pipe(gulp.dest("pub/"));
+    return gulp.src("src/images/*")
+    .pipe(gulp.dest("pub/images"));
   });
 
 /* Concat and minify CSS */
