@@ -8,7 +8,7 @@ Här kommer några exempel på **automatiserings-processens** syfte:
 * konventera innehåll i filer
 * automatisk kvalitetskontroll av kod
 
-För att automatisera mitt projekt har jag använt **Node.js**-open-source plattform, **NPM**-pakethanterare för Node.js, **GULP**-javascript-task runner som låter dig automatisera uppgifter. 
+För att automatisera mitt projekt har jag använt **Node.js**-open-source plattform, **NPM**-pakethanterare för Node.js, **GULP**-javascript-task runner(automatiserar uppgifter). 
 Jag använder följande GULP-paket i automatisering av mitt projekt:
 * gulp-concat  -sammanslår filer
 * gulp-uglify  -komprimerar filer(js)
