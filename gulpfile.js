@@ -1,29 +1,29 @@
 const gulp = require("gulp");
 const concat = require("gulp-concat");
 const uglify = require("gulp-uglify");
-const cleanCSS = require('gulp-clean-css');
+const cleanCSS = require("gulp-clean-css");
 const watch = require("gulp-watch");
 
-/* Flytta HTML-filer*/
+/* Move HTML-files*/
 gulp.task("copyhtml",function(){
   return gulp.src("src/*.html")
   .pipe(gulp.dest("pub/"));
 });
 
-/* Flytta images */
+/* Move Pictures */
 gulp.task("copyimages",function(){
     return gulp.src("src/images")
     .pipe(gulp.dest("pub/"));
   });
 
-/* Sammanslå och minimera CSS */
+/* Clean CSS */
 gulp.task('minify-css', function() {
     return gulp.src('src/css/*.css')
       .pipe(cleanCSS({compatibility: 'ie8'}))
       .pipe(gulp.dest('pub/css'));
   });
 
-/* Sammanslå och minimera Javascript */
+/* Concat and minify Javascript */
 gulp.task("concminjs",function(){
   return gulp.src("src/js/*.js")
   .pipe(concat("main.min.js"))
@@ -31,7 +31,7 @@ gulp.task("concminjs",function(){
   .pipe(gulp.dest("pub/js"));
 });
 
-/* Kontrollera ändringar i filsystemet */
+/* Control changes in files */
 gulp.task("watcher",function(){
   watch ("src/js/*.js",function(){
   gulp.start("concminjs");
