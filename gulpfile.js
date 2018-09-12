@@ -16,9 +16,10 @@ gulp.task("copyimages",function(){
     .pipe(gulp.dest("pub/"));
   });
 
-/* Clean CSS */
-gulp.task('minify-css', function() {
+/* Concat and minify CSS */
+gulp.task('concmincss', function() {
     return gulp.src('src/css/*.css')
+      .pipe(concat("all.css"))
       .pipe(cleanCSS({compatibility: 'ie8'}))
       .pipe(gulp.dest('pub/css'));
   });
@@ -26,7 +27,7 @@ gulp.task('minify-css', function() {
 /* Concat and minify Javascript */
 gulp.task("concminjs",function(){
   return gulp.src("src/js/*.js")
-  .pipe(concat("main.min.js"))
+  .pipe(concat("all.js"))
   .pipe(uglify())
   .pipe(gulp.dest("pub/js"));
 });
@@ -42,7 +43,7 @@ gulp.task("watcher",function(){
   });
 
   watch("src/css/*.css",function(){
-  gulp.start("minify-css");
+  gulp.start("concmincss");
   });
 
   watch("src/images",function(){
@@ -51,5 +52,5 @@ gulp.task("watcher",function(){
 });
 
 /* Default */
-gulp.task("default",["copyhtml","concminjs","copyimages","minify-css","watcher"]);
+gulp.task("default",["copyhtml","concminjs","copyimages","concmincss","watcher"]);
 
