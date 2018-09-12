@@ -16,7 +16,7 @@ Jag använder följande GULP-paket i automatisering av mitt projekt:
 * gulp-watch  -bevakar filer
 
 **Command Prompt**.
-Mitt projekt finns att klona från följande adress..... Den innehåller "package.json" fil vilket gör att igenom "npm install" installeras alla filer/paket som behövs för att använda mitt projekt. Kommandot "gulp" startar alla automatiseringsprocesser.
+Mitt projekt finns att klona från följande adress <https://github.com/Tiia-Mai/Moment_2.git> Den innehåller "package.json" fil vilket gör att igenom "npm install" installeras alla filer/paket som behövs för att använda mitt projekt. Kommandot "gulp" startar alla automatiseringsprocesser.
 
 För mitt projekt ingår följande gulp-tasks:
 * copyhtml- flyttar HTML-filer till katalog "Pub"
