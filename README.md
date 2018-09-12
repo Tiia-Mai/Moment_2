@@ -1,10 +1,12 @@
 # Moment_2
 
 
-Denna uppgift handlar om **versionhanteringssystem**. Jag har förklarat olika _begrepp_ som används i **_versionhanteringssystem_**. Jag har även lärt mig olika kommandos som används i GIT system, tex:
-* git init
-* git config
-* git fetch
-* git log
+Här kommer några exempel på **automatiserings-processens** syfte:
+* sammanslå flera och komprimera flera filers innehåll
+* komprimera grafiska filer
+* kopiera filer
+* konventera innehåll i filer
+* automatisk kvalitetskontroll av kod
 
-Jag har skapat konto på [GITHUB](www.github.com) och ett nytt **Remote repository**.
+För att automatisera mitt projekt har jag använt **Node.js**-open-source plattform, **NPM**-pakethanterare för Node.js, **GULP**-javascript-task runner som låter dig automatisera uppgifter.
+
