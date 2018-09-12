@@ -15,7 +15,7 @@ Jag använder följande GULP-paket i automatisering av mitt projekt:
 * gulp-clean-css  -komprimerar CSS filer
 * gulp-watch  -bevakar filer
 
-**Command Prompt**
+**Command Prompt**.
 Mitt projekt finns att klona från följande adress..... Den innehåller "package.json" fil vilket gör att igenom "npm install" installeras alla filer/paket som behövs för att använda mitt projekt. Kommandot "gulp" startar alla automatiseringsprocesser.
 
 Mitt projekt innehåller följande tasks:
