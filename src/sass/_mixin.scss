@@ -1,0 +1,52 @@
+
+
+  /*mixin small screen*/
+@mixin height-width-100(){
+	height: 100%;
+	width: 100%;
+}
+@mixin floating-small-screen(){
+	float: left;
+	clear: left;
+	margin: 0 0 10px; 
+	width: 100%;
+}
+@mixin li-small-screen(){
+	margin: 0;
+	background: #efefef;
+	display: block;
+	margin-bottom: 3px;
+}
+@mixin a-small-screen(){
+	display: block;
+	padding: 10px;
+	text-align: center;
+}
+
+
+/* mixin for changing background-color and text color*/
+@mixin backGround($smallScreen){
+    body{
+        @if $smallScreen==true{
+            background:$backround-color3;
+        }@else{
+            background:$backround-color2;
+        }
+    }
+    p,h1{
+        @if $smallScreen==true{
+            color:$primary-color_text2;
+            text-shadow: 0 -1px 0 lighten($base-color, 50);
+        }@else{
+            color:$primary-color_text;
+            text-shadow: 0 -1px 0 lighten($base-color, 95);
+        }
+    }
+    aside{
+        @if $smallScreen==true{
+            background:$backround-color3;
+        }@else{
+            background: $backround-color1;
+        }
+    }
+}

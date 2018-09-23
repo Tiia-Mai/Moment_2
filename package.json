@@ -1,7 +1,7 @@
 {
-  "name": "moment_2",
+  "name": "moment_3",
   "version": "1.0.0",
-  "description": "Moment 2 DT173G",
+  "description": "Moment 3 DT173G",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,6 +12,8 @@
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.10.0",
     "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.1",
     "gulp-watch": "^5.0.1"
   }

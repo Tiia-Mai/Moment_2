@@ -1,8 +1,22 @@
+'use strict';
+
 const gulp = require("gulp");
 const concat = require("gulp-concat");
 const uglify = require("gulp-uglify");
 const cleanCSS = require("gulp-clean-css");
 const watch = require("gulp-watch");
+const sass = require('gulp-sass');
+
+var sourcemaps = require('gulp-sourcemaps');
+
+/* SASS*/
+gulp.task('sass', function () {
+  return gulp.src('src/sass/**/*.scss')
+  .pipe(sourcemaps.init())
+  .pipe(sass().on('error', sass.logError))
+  .pipe(sourcemaps.write())
+  .pipe(gulp.dest('src/css'));
+  });
 
 /* Move HTML-files*/
 gulp.task("copyhtml",function(){
@@ -49,8 +63,12 @@ gulp.task("watcher",function(){
   watch("src/images",function(){
   gulp.start("copyimages");
   });
+
+  watch("src/sass/**/*.scss", function () {
+    gulp.start("sass");
+    });
 });
 
 /* Default */
-gulp.task("default",["copyhtml","concminjs","copyimages","concmincss","watcher"]);
+gulp.task("default",["copyhtml","concminjs","copyimages","concmincss","sass","watcher"]);
 

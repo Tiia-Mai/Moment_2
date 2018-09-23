@@ -1,0 +1,10 @@
+$base-color:#000;
+$base-color2:#f9080c;
+
+$backround-color1:lighten($base-color,98);
+$backround-color2:lighten($base-color,93);
+$backround-color3:desaturate($base-color2,20);
+
+$primary-color_heading: lighten($base-color, 10);
+$primary-color_text:lighten($base-color,20);
+$primary-color_text2:lighten($base-color,98);
